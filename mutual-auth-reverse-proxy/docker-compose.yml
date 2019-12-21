@@ -1,0 +1,28 @@
+version: "2"
+services:
+  reverse-proxy:
+    build: 
+      context: ./reverse-proxy
+    ports: 
+      - "0.0.0.0:3000:3000"
+  server1:
+    build: 
+      context: ./server1
+    ports: 
+      - "0.0.0.0:3001:3001"
+  server2:
+    build: 
+      context: ./server2
+    ports: 
+      - "0.0.0.0:3002:3002"
+  server3:
+    build: 
+      context: ./server3
+    ports: 
+      - "0.0.0.0:3003:3003"
+  authorization:
+    build: 
+      context: ./authorization
+    ports: 
+      - "0.0.0.0:3004:3004"
+
